@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr: #222327;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr);
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation {
+    position: relative;
+    background-color: #fff;
+    width: 500px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.navigation ul {
+    display: flex;
+    width: 450px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 90px;
+    height: 80px;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    text-decoration-line: none;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    line-height: 85px;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--clr);
+    transition: 0.5s;
+    transform: translateY(15px);
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-32px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    letter-spacing: 0.15px;
+    color: var(--clr);
+    transition: 0.5s;
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.navigation ul li.active a .text {
+    transform: translateY(10px);
+    opacity: 1;
+}
+.indicator{
+    position: absolute;
+    top: -50%;
+    left: 35px;
+    background: #2df953;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+.indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 20px;
+    left: -22px;
+    background: transparent;
+    border-top-right-radius: 25px;
+    box-shadow: 0.5px -10px 0 0 var(--clr);
+}
+.indicator::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    right: -22px;
+    background: transparent;
+    border-top-left-radius: 22px;
+    box-shadow: -0.5px -10px 0 0 var(--clr);
+}
+
+
+.navigation ul li:nth-child(1).active ~ .indicator{
+    transform: translateX(calc(90px*0));
+}
+.navigation ul li:nth-child(2).active ~ .indicator{
+    transform: translateX(calc(90px*1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+    transform: translateX(calc(90px*2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+    transform: translateX(calc(90px*3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+    transform: translateX(calc(90px*4));
+}
