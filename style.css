@@ -133,3 +133,117 @@ body {
 .navigation ul li:nth-child(5).active ~ .indicator{
     transform: translateX(calc(90px*4));
 }
+
+
+@media only screen and (max-width: 700px) {
+.navigation {
+    position: relative;
+    background-color: #fff;
+    width: 90px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.navigation ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 75px;
+    height: 550px;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    line-height: 85px;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--clr);
+    transition: 0.5s;
+    transform: translateY(5px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 0.15px;
+    color: var(--clr);
+    transition: 0.5s;
+    transform: translateY(35px);
+    opacity: 0;
+}
+.navigation ul li.active a .icon {
+    transform: translateY(15px);
+}
+
+.navigation ul li.active a .text {
+    transform: translateY(70px);
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    top: 4%;
+    left: 9px;
+    background: #2df953;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid var(--clr);
+    transition: 0.5s;
+}
+
+.indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 22px;
+    height: 20px;
+    /* left: -22px; */
+    background: transparent;
+    border-radius: 0px;
+    box-shadow: 0 0 0 0 var(--clr);
+    
+    /* border-top-right-radius: 0px; */
+    /* box-shadow: 0.5px -10px 0 0 var(--clr); */
+}
+
+.indicator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    /* right: -22px; */
+    background: transparent;
+    border-radius: 0px;
+    box-shadow: 0 0 0 0 var(--clr);
+    /* border-top-left-radius: 0px; */
+    /* box-shadow: -0.5px -10px 0 0 var(--clr); */
+}
+.navigation ul li:nth-child(1).active~.indicator {
+transform: translateY(calc(110px*0));
+}
+
+.navigation ul li:nth-child(2).active~.indicator {
+    transform: translateY(calc(110px*1));
+}
+
+.navigation ul li:nth-child(3).active~.indicator {
+    transform: translateY(calc(115px*2));
+}
+
+.navigation ul li:nth-child(4).active~.indicator {
+    transform: translateY(calc(116px*3));
+}
+
+.navigation ul li:nth-child(5).active~.indicator {
+    transform: translateY(calc(116px*4));
+}
+}
