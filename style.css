@@ -139,13 +139,13 @@ body {
 .navigation {
     position: relative;
     background-color: #fff;
-    width: 90px;
+    width: 110px;
     height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 20px;
+    border-radius: 60px;
 }
 .navigation ul {
     display: flex;
@@ -189,11 +189,11 @@ body {
 
 .indicator {
     position: absolute;
-    top: 4%;
-    left: 9px;
+    top: 1%;
+    left: 7px;
     background: #2df953;
-    width: 70px;
-    height: 70px;
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
     border: 6px solid var(--clr);
     transition: 0.5s;
@@ -232,18 +232,18 @@ transform: translateY(calc(110px*0));
 }
 
 .navigation ul li:nth-child(2).active~.indicator {
-    transform: translateY(calc(110px*1));
+    transform: translateY(calc(110px*1.05));
 }
 
 .navigation ul li:nth-child(3).active~.indicator {
-    transform: translateY(calc(115px*2));
+    transform: translateY(calc(115px*2.05));
 }
 
 .navigation ul li:nth-child(4).active~.indicator {
-    transform: translateY(calc(116px*3));
+    transform: translateY(calc(116px*3.05));
 }
 
 .navigation ul li:nth-child(5).active~.indicator {
-    transform: translateY(calc(116px*4));
+    transform: translateY(calc(116px*4.05));
 }
 }
